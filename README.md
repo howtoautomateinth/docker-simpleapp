@@ -1,4 +1,5 @@
 # Simple App
+![Travis](https://travis-ci.org/howtoautomateinth/docker-simpleapp.svg?branch=master)
 
 Simple REST API application
 
