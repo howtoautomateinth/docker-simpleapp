@@ -1,6 +1,11 @@
 language: python
+services:
+    - docker
 # command to install dependencies
 install:
     - pip install -r requirements.txt
+    - docker build -t simpleapp .
+    - docker run -p 5000:5000 -d --name simpleapp simpleapp
 script:
+    - docker ps | grep -q simpleapp
     - pytest
